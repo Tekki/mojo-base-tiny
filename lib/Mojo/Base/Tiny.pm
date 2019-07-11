@@ -213,7 +213,7 @@ interfaces.
 
 It is nothing else than L<Mojo::Base> in a single file without dependencies
 outside the core modules (or to be correct, on Perl 5.20 and older you need
-L<List::Util> 1.41). You can copy it directly to your project in all the
+L<Sub::Util> 1.41). You can copy it directly to your project in all the
 "I can't (or don't want to) install L<Mojolicious>" cases.
 
   # Automatically enables "strict", "warnings", "utf8" and Perl 5.10 features
@@ -432,6 +432,8 @@ Zoffix Znet - C<cpan@zoffix.com>
 Ask Bjørn Hansen - C<ask@perl.org>
 
 Tekki (Rolf Stöckli) - C<tekki@cpan.org>
+
+Mohammad S Anwar - C<mohammad.anwar@yahoo.com>
 
 =head1 COPYRIGHT
 
