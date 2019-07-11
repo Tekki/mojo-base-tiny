@@ -33,7 +33,7 @@ interfaces.
 
 It is nothing else than [Mojo::Base](https://metacpan.org/pod/Mojo::Base) in a single file without dependencies
 outside the core modules (or to be correct, on Perl 5.20 and older you need
-[List::Util](https://metacpan.org/pod/List::Util) 1.41). You can copy it directly to your project in all the
+[Sub::Util](https://metacpan.org/pod/Sub::Util) 1.41). You can copy it directly to your project in all the
 "I can't (or don't want to) install [Mojolicious](https://metacpan.org/pod/Mojolicious)" cases.
 
     # Automatically enables "strict", "warnings", "utf8" and Perl 5.10 features
@@ -248,6 +248,8 @@ Zoffix Znet - `cpan@zoffix.com`
 Ask Bjørn Hansen - `ask@perl.org`
 
 Tekki (Rolf Stöckli) - `tekki@cpan.org`
+
+Mohammad S Anwar - `mohammad.anwar@yahoo.com`
 
 # COPYRIGHT
 
