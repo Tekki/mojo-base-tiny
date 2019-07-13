@@ -71,3 +71,4 @@
 ^README\.pod
 ^\.perltidyrc
 ^\.travis.yml
+^\.project/
