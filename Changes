@@ -1,6 +1,6 @@
 Revision history for perl distribution Mojo-Base-Tiny
 
-0.04 Not Released
+0.04 2019-12-30T18:02:53+0100
   - (Don't) add -async flag from Mojolicious 8.28
 
 0.03 2019-07-13T06:31:34+0200

@@ -15,7 +15,7 @@ use Sub::Util    ();
 # Only Perl 5.14+ requires it on demand
 use IO::Handle ();
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 # Role support requires Role::Tiny 2.000001+
 use constant ROLES =>

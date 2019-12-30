@@ -28,12 +28,12 @@ Mojo::Base::Tiny - Minimal base class for !Mojo projects
 
 # DESCRIPTION
 
-[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo::Base::Tiny) is a simple base class for Perl projects with fluent
+[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo%3A%3ABase%3A%3ATiny) is a simple base class for Perl projects with fluent
 interfaces.
 
-It is nothing else than [Mojo::Base](https://metacpan.org/pod/Mojo::Base) in a single file without dependencies
+It is nothing else than [Mojo::Base](https://metacpan.org/pod/Mojo%3A%3ABase) in a single file without dependencies
 outside the core modules (or to be correct, on Perl 5.20 and older you need
-[Sub::Util](https://metacpan.org/pod/Sub::Util) 1.41). You can copy it directly to your project in all the
+[Sub::Util](https://metacpan.org/pod/Sub%3A%3AUtil) 1.41). You can copy it directly to your project in all the
 "I can't (or don't want to) install [Mojolicious](https://metacpan.org/pod/Mojolicious)" cases.
 
     # Automatically enables "strict", "warnings", "utf8" and Perl 5.10 features
@@ -43,7 +43,7 @@ outside the core modules (or to be correct, on Perl 5.20 and older you need
     use Mojo::Base::Tiny -role;
 
 All four forms save a lot of typing. Note that role support depends on
-[Role::Tiny](https://metacpan.org/pod/Role::Tiny) (2.000001+).
+[Role::Tiny](https://metacpan.org/pod/Role%3A%3ATiny) (2.000001+).
 
     # use Mojo::Base::Tiny -strict;
     use strict;
@@ -93,6 +93,13 @@ enable support for [subroutine signatures](https://metacpan.org/pod/perlsub#Sign
     use Mojo::Base::Tiny 'SomeBaseClass', -signatures;
     use Mojo::Base::Tiny -role, -signatures;
 
+If you want to activate the `async` and `await` keywords to deal much more
+efficiently with promises, it is finally time to move to a full [Mojolicious](https://metacpan.org/pod/Mojolicious)
+installation and to use [Mojo::Base](https://metacpan.org/pod/Mojo%3A%3ABase).
+
+    # async/await not available
+    use Mojo::Base::Tiny -strict, -async;  # throws an error
+
 This will also disable experimental warnings on versions of Perl where this
 feature was still experimental.
 
@@ -100,7 +107,7 @@ feature was still experimental.
 
 Fluent interfaces are a way to design object-oriented APIs around method
 chaining to create domain-specific languages, with the goal of making the
-readablity of the source code close to written prose.
+readability of the source code close to written prose.
 
     package Duck;
     use Mojo::Base::Tiny -base;
@@ -113,7 +120,7 @@ readablity of the source code close to written prose.
       say "$name: Quack!"
     }
 
-[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo::Base::Tiny) will help you with this by having all attribute accessors created
+[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo%3A%3ABase%3A%3ATiny) will help you with this by having all attribute accessors created
 with ["has"](#has) (or ["attr"](#attr)) return their invocant (`$self`) whenever they
 are used to assign a new attribute value.
 
@@ -127,7 +134,7 @@ object.
 
 # FUNCTIONS
 
-[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo::Base::Tiny) implements the following functions, which can be imported with
+[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo%3A%3ABase%3A%3ATiny) implements the following functions, which can be imported with
 the `-base` flag or by setting a base class.
 
 ## has
@@ -146,7 +153,7 @@ Create attributes for hash-based objects, just like the ["attr"](#attr) method.
 
 # METHODS
 
-[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo::Base::Tiny) implements the following methods.
+[Mojo::Base::Tiny](https://metacpan.org/pod/Mojo%3A%3ABase%3A%3ATiny) implements the following methods.
 
 ## attr
 
@@ -211,11 +218,11 @@ spliced or tapped into) a chained set of object method calls.
     my $new_class = SubClass->with_roles('+One', '+Two');
     $object       = $object->with_roles('+One', '+Two');
 
-Create a new class with one or more [Role::Tiny](https://metacpan.org/pod/Role::Tiny) roles. If called on a class
+Create a new class with one or more [Role::Tiny](https://metacpan.org/pod/Role%3A%3ATiny) roles. If called on a class
 returns the new class, or if called on an object reblesses the object into the
 new class. For roles following the naming scheme `MyClass::Role::RoleName` you
 can use the shorthand `+RoleName`. Note that role support depends on
-[Role::Tiny](https://metacpan.org/pod/Role::Tiny) (2.000001+).
+[Role::Tiny](https://metacpan.org/pod/Role%3A%3ATiny) (2.000001+).
 
     # Create a new class with the role "SubClass::Role::Foo" and instantiate it
     my $new_class = SubClass->with_roles('+Foo');
@@ -223,7 +230,7 @@ can use the shorthand `+RoleName`. Note that role support depends on
 
 # SEE ALSO
 
-[Mojo::Base](https://metacpan.org/pod/Mojo::Base), [Mojolicious](https://metacpan.org/pod/Mojolicious).
+[Mojo::Base](https://metacpan.org/pod/Mojo%3A%3ABase), [Mojolicious](https://metacpan.org/pod/Mojolicious).
 
 # AUTHOR
 
