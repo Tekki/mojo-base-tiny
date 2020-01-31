@@ -98,7 +98,7 @@ efficiently with promises, it is finally time to move to a full [Mojolicious](ht
 installation and to use [Mojo::Base](https://metacpan.org/pod/Mojo%3A%3ABase).
 
     # async/await not available
-    use Mojo::Base::Tiny -strict, -async;  # throws an error
+    use Mojo::Base::Tiny -strict, -async_await;  # throws an error
 
 This will also disable experimental warnings on versions of Perl where this
 feature was still experimental.
@@ -260,8 +260,8 @@ Mohammad S Anwar - `mohammad.anwar@yahoo.com`
 
 # COPYRIGHT
 
-© 2008-2019 Sebastian Riedel and others.
+© 2008–2019 Sebastian Riedel and others.
 
-© 2019 Tekki (Rolf Stöckli).
+© 2019–2020 Tekki (Rolf Stöckli).
 
 This program is free software, you can redistribute it and/or modify it under the terms of the Artistic License version 2.0.
