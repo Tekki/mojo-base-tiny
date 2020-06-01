@@ -36,7 +36,7 @@ outside the core modules (or to be correct, on Perl 5.20 and older you need
 [Sub::Util](https://metacpan.org/pod/Sub%3A%3AUtil) 1.41). You can copy it directly to your project in all the
 "I can't (or don't want to) install [Mojolicious](https://metacpan.org/pod/Mojolicious)" cases.
 
-    # Automatically enables "strict", "warnings", "utf8" and Perl 5.10 features
+    # Automatically enables "strict", "warnings", "utf8" and Perl 5.16 features
     use Mojo::Base::Tiny -strict;
     use Mojo::Base::Tiny -base;
     use Mojo::Base::Tiny 'SomeBaseClass';
@@ -49,17 +49,15 @@ All four forms save a lot of typing. Note that role support depends on
     use strict;
     use warnings;
     use utf8;
-    use feature ':5.10';
+    use feature ':5.16';
     use mro;
-    use IO::Handle ();
 
     # use Mojo::Base::Tiny -base;
     use strict;
     use warnings;
     use utf8;
-    use feature ':5.10';
+    use feature ':5.16';
     use mro;
-    use IO::Handle ();
     push @ISA, 'Mojo::Base::Tiny';
     sub has { Mojo::Base::Tiny::attr(__PACKAGE__, @_) }
 
@@ -67,9 +65,8 @@ All four forms save a lot of typing. Note that role support depends on
     use strict;
     use warnings;
     use utf8;
-    use feature ':5.10';
+    use feature ':5.16';
     use mro;
-    use IO::Handle ();
     require SomeBaseClass;
     push @ISA, 'SomeBaseClass';
     sub has { Mojo::Base::Tiny::attr(__PACKAGE__, @_) }
@@ -78,9 +75,8 @@ All four forms save a lot of typing. Note that role support depends on
     use strict;
     use warnings;
     use utf8;
-    use feature ':5.10';
+    use feature ':5.16';
     use mro;
-    use IO::Handle ();
     use Role::Tiny;
     sub has { Mojo::Base::Tiny::attr(__PACKAGE__, @_) }
 
